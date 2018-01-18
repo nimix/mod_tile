@@ -3,8 +3,10 @@ Description=Mapnik rendering daemon
 
 [Service]
 ExecStart=/usr/bin/renderd -f
+RuntimeDirectory=renderd
 Restart=always
 User=www-data
+SyslogLevel=warning
 
 [Install]
 WantedBy=multi-user.target
